@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections - Damietta Heritage Furniture</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../layout.css">
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="../rtl.css">
+</head>
+<body>
+  <header style="padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border); background: var(--color-surface);">
+    <div class="container flex flex--space-between flex--align-center">
+      <div class="logo">
+        <a href="index.html" style="font-family: var(--font-display); font-size: var(--text-xl); color: inherit;">DAMIETTA</a>
+      </div>
+      <nav class="flex flex--gap-md" style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-xs);">
+        <a href="gallery.html">Shop</a>
+        <a href="custom-order.html">Custom</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--sm">
+      <div class="container text-center">
+        <h1 style="font-family: var(--font-display); font-size: var(--text-4xl); margin-bottom: var(--space-4);">Curated Collections</h1>
+        <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto;">Cohesive room sets designed to bring harmony to your space. Handcrafted in Damietta.</p>
+      </div>
+    </section>
+
+    <!-- Collection 1 -->
+    <section class="section section--no-pad-top">
+      <div class="container">
+        <div class="grid grid--split" style="gap: var(--space-12);">
+          <div style="aspect-ratio: 4/5; border-radius: var(--radius-md); overflow: hidden;">
+            <img src="https://via.placeholder.com/800x1000" alt="The Walnut Dining Collection" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div>
+            <span style="font-family: var(--font-label); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-wood-warm);">Solid Walnut</span>
+            <h2 style="font-size: var(--text-3xl); margin-block: var(--space-2) var(--space-4);">The Malak Dining Set</h2>
+            <p style="margin-bottom: var(--space-6); color: var(--color-text-secondary);">A celebration of natural wood grain. Sourced sustainably, crafted with traditional mortise and tenon joinery, and finished with a hand-rubbed matte oil to protect while breathing.</p>
+            <div style="display: flex; gap: var(--space-4);">
+              <a href="gallery.html?collection=malak" class="btn btn--primary">View Collection</a>
+              <a href="custom-order.html" class="btn btn--secondary">Request Custom Size</a>
+            </div>
+
+            <div style="margin-top: var(--space-8); border-top: 1px solid var(--color-border); padding-top: var(--space-6);">
+              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-4);">Pieces in this collection</h3>
+              <div class="flex scroll-x flex--gap-md">
+                <div style="width: 120px;">
+                  <img src="https://via.placeholder.com/150x150" alt="Table" style="border-radius: var(--radius-sm); margin-bottom: var(--space-2);">
+                  <div style="font-size: var(--text-xs); font-weight: 600;">Dining Table</div>
+                </div>
+                <div style="width: 120px;">
+                  <img src="https://via.placeholder.com/150x150" alt="Chair" style="border-radius: var(--radius-sm); margin-bottom: var(--space-2);">
+                  <div style="font-size: var(--text-xs); font-weight: 600;">Dining Chair</div>
+                </div>
+                <div style="width: 120px;">
+                  <img src="https://via.placeholder.com/150x150" alt="Bench" style="border-radius: var(--radius-sm); margin-bottom: var(--space-2);">
+                  <div style="font-size: var(--text-xs); font-weight: 600;">Dining Bench</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collection 2 -->
+    <section class="section" style="background: var(--color-surface);">
+      <div class="container">
+        <div class="grid grid--split" style="gap: var(--space-12);">
+          <!-- Flipped layout -->
+          <div style="order: 2;">
+            <div style="aspect-ratio: 4/5; border-radius: var(--radius-md); overflow: hidden;">
+              <img src="https://via.placeholder.com/800x1000" alt="The Oak Living Collection" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+          <div style="order: 1;">
+            <span style="font-family: var(--font-label); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-wood-warm);">Oak & Bouclé</span>
+            <h2 style="font-size: var(--text-3xl); margin-block: var(--space-2) var(--space-4);">The Kemi Living Set</h2>
+            <p style="margin-bottom: var(--space-6); color: var(--color-text-secondary);">Soft curves meeting structural rigidity. Inspired by Mediterranean warmth, built with Damietta strength. Perfect for relaxed, sun-filled living spaces.</p>
+            <div style="display: flex; gap: var(--space-4);">
+              <a href="gallery.html?collection=kemi" class="btn btn--primary">View Collection</a>
+            </div>
+
+            <div style="margin-top: var(--space-8); border-top: 1px solid var(--color-border); padding-top: var(--space-6);">
+              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-4);">Pieces in this collection</h3>
+              <div class="flex scroll-x flex--gap-md">
+                <div style="width: 120px;">
+                  <img src="https://via.placeholder.com/150x150" alt="Sofa" style="border-radius: var(--radius-sm); margin-bottom: var(--space-2);">
+                  <div style="font-size: var(--text-xs); font-weight: 600;">3-Seater Sofa</div>
+                </div>
+                <div style="width: 120px;">
+                  <img src="https://via.placeholder.com/150x150" alt="Armchair" style="border-radius: var(--radius-sm); margin-bottom: var(--space-2);">
+                  <div style="font-size: var(--text-xs); font-weight: 600;">Armchair</div>
+                </div>
+                <div style="width: 120px;">
+                  <img src="https://via.placeholder.com/150x150" alt="Coffee Table" style="border-radius: var(--radius-sm); margin-bottom: var(--space-2);">
+                  <div style="font-size: var(--text-xs); font-weight: 600;">Coffee Table</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

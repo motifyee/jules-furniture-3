@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Damietta Heritage Furniture</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../layout.css">
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="../rtl.css">
+</head>
+<body>
+  <header style="padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border); background: var(--color-surface);">
+    <div class="container flex flex--space-between flex--align-center">
+      <div class="logo">
+        <a href="index.html" style="font-family: var(--font-display); font-size: var(--text-xl); color: inherit;">DAMIETTA</a>
+      </div>
+      <nav class="flex flex--gap-md" style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-xs);">
+        <a href="gallery.html">Shop</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="grid grid--split" style="gap: var(--space-12);">
+
+        <!-- Contact Info -->
+        <div>
+          <h1 style="font-family: var(--font-display); font-size: var(--text-4xl); margin-bottom: var(--space-6);">Get in touch</h1>
+          <p style="font-size: var(--text-lg); color: var(--color-text-secondary); margin-bottom: var(--space-8);">Whether you need help choosing a fabric or want to discuss a bulk trade order, our team is ready to assist.</p>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+            <div>
+              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2); font-weight: 600;">Customer Support (WhatsApp)</h3>
+              <p style="color: var(--color-text-secondary); margin-bottom: var(--space-2);">Quickest way to reach us. Typically replies within minutes.</p>
+              <a href="https://wa.me/1234567890" class="consult-widget">Chat with Support</a>
+            </div>
+
+            <div>
+              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2); font-weight: 600;">Email</h3>
+              <p style="color: var(--color-text-secondary);">
+                General inquiries: hello@damiettaheritage.com<br>
+                Trade & Wholesale: trade@damiettaheritage.com
+              </p>
+            </div>
+
+            <div>
+              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2); font-weight: 600;">Workshop (By Appointment Only)</h3>
+              <p style="color: var(--color-text-secondary);">
+                Industrial Zone, Damietta<br>
+                Egypt
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div style="background: var(--color-surface); padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+          <h2 style="margin-bottom: var(--space-6);">Send us a message</h2>
+          <form>
+            <div class="input-group">
+              <label class="input-label" for="subject">Inquiry Type</label>
+              <select id="subject" class="input-field">
+                <option>General Question</option>
+                <option>Existing Order Support</option>
+                <option>Material Samples Request</option>
+                <option>Trade & Wholesale</option>
+              </select>
+            </div>
+
+            <div class="grid grid--2-col" style="gap: var(--space-4); margin-bottom: var(--space-4);">
+              <div class="input-group" style="margin-bottom: 0;">
+                <label class="input-label" for="name">Name *</label>
+                <input type="text" id="name" class="input-field" required>
+              </div>
+              <div class="input-group" style="margin-bottom: 0;">
+                <label class="input-label" for="email">Email *</label>
+                <input type="email" id="email" class="input-field" required>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label" for="message">Message</label>
+              <textarea id="message" class="input-field" style="min-height: 150px;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" style="font-size: var(--text-base); padding-block: var(--space-4);">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

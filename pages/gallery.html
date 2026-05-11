@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Damietta Heritage Furniture</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../layout.css">
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="../rtl.css">
+  <style>
+    /* Specific Gallery Layout Styles */
+    .filter-panel {
+      position: sticky;
+      top: var(--space-4);
+      height: max-content;
+      max-height: calc(100vh - var(--space-8));
+      overflow-y: auto;
+    }
+    @media(max-width: 1023px) {
+      .filter-panel {
+        display: none; /* In reality would slide up via JS */
+      }
+    }
+    .gallery-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .active-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-6);
+    }
+    .filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-1) var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-pill);
+      font-size: var(--text-xs);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Minimal -->
+  <header style="padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border); background: var(--color-surface);">
+    <div class="container flex flex--space-between flex--align-center">
+      <div class="logo">
+        <a href="index.html" style="font-family: var(--font-display); font-size: var(--text-xl); color: inherit;">DAMIETTA</a>
+      </div>
+      <nav class="flex flex--gap-md" style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-xs);">
+        <a href="gallery.html">Shop</a>
+        <a href="custom-order.html">Custom</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section section--sm">
+    <div class="container">
+      <div class="gallery-header">
+        <div>
+          <h1 style="font-family: var(--font-display); margin-bottom: var(--space-2);">All Furniture</h1>
+          <p style="color: var(--color-text-secondary); font-size: var(--text-sm);">Showing 24 of 87 pieces</p>
+        </div>
+        <div class="flex flex--gap-sm flex--align-center">
+          <button class="btn btn--secondary" style="display: none;">Filters (3)</button>
+          <select class="input-field" aria-label="Sort by">
+            <option>Featured</option>
+            <option>Newest</option>
+            <option>Best-selling</option>
+            <option>Price Low-High</option>
+            <option>Price High-Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid grid--sidebar">
+        <!-- Filter Sidebar -->
+        <aside class="filter-panel" role="search" aria-label="Product filters">
+          <div class="active-filters">
+            <span class="filter-chip">Solid Walnut ✕</span>
+            <span class="filter-chip">Living Room ✕</span>
+            <button class="btn btn--ghost" style="font-size: var(--text-xs);">Clear All</button>
+          </div>
+
+          <details class="accordion" open>
+            <summary>Room</summary>
+            <div class="accordion__content flex flex--column flex--gap-sm">
+              <label><input type="checkbox"> Living Room</label>
+              <label><input type="checkbox"> Bedroom</label>
+              <label><input type="checkbox"> Dining Room</label>
+            </div>
+          </details>
+
+          <details class="accordion" open>
+            <summary>Material</summary>
+            <div class="accordion__content flex flex--column flex--gap-sm">
+              <label><input type="checkbox"> Solid Wood</label>
+              <label><input type="checkbox"> Engineered</label>
+              <label><input type="checkbox"> Upholstered</label>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary>Wood Type</summary>
+            <div class="accordion__content flex flex--column flex--gap-sm">
+              <label><input type="checkbox"> Walnut</label>
+              <label><input type="checkbox"> Oak</label>
+              <label><input type="checkbox"> Mahogany</label>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary>Fabric</summary>
+            <div class="accordion__content flex flex--column flex--gap-sm">
+              <label><input type="checkbox"> Linen</label>
+              <label><input type="checkbox"> Velvet</label>
+              <label><input type="checkbox"> Leather</label>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary>Color</summary>
+            <div class="accordion__content swatch-grid">
+              <div class="swatch" style="background-color: var(--material-oak);" title="Natural Wood"></div>
+              <div class="swatch" style="background-color: var(--material-walnut);" title="Dark Wood"></div>
+              <div class="swatch" style="background-color: #fff; border: 1px solid #ccc;" title="White"></div>
+              <div class="swatch" style="background-color: #000;" title="Black"></div>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary>Price Range</summary>
+            <div class="accordion__content">
+              <!-- Slider component placeholder -->
+              <input type="range" style="width: 100%; margin-block: var(--space-2);">
+              <div style="display: flex; justify-content: space-between; font-size: var(--text-xs); color: var(--color-text-secondary);">
+                <span>0 EGP</span>
+                <span>100,000+ EGP</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary>Dimension (Width)</summary>
+            <div class="accordion__content flex flex--column flex--gap-sm">
+              <label><input type="checkbox"> Under 120cm</label>
+              <label><input type="checkbox"> 120cm - 180cm</label>
+              <label><input type="checkbox"> Over 180cm</label>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary>Features</summary>
+            <div class="accordion__content flex flex--column flex--gap-sm">
+              <label><input type="checkbox"> Custom Available</label>
+              <label><input type="checkbox"> In Stock</label>
+              <label><input type="checkbox"> New Arrivals</label>
+              <label><input type="checkbox"> Bestsellers</label>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary>Delivery</summary>
+            <div class="accordion__content flex flex--column flex--gap-sm">
+              <label><input type="checkbox"> Available this week</label>
+              <label><input type="checkbox"> Made to order</label>
+            </div>
+          </details>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="grid grid--3-col">
+          <!-- Product Card 1 -->
+          <article class="product-card">
+            <div class="product-card__material-strip" style="background-color: var(--material-walnut);"></div>
+            <button class="product-card__wishlist" aria-label="Add Malak Walnut Dining Table to wishlist">♡</button>
+            <div class="product-card__badges">
+              <span class="badge badge--accent">Bestseller</span>
+            </div>
+            <a href="product.html" class="product-card__image-wrapper">
+              <picture>
+                <img class="product-card__image" src="https://via.placeholder.com/400x500" alt="Solid walnut table main" loading="lazy" width="400" height="500">
+              </picture>
+              <picture>
+                <img class="product-card__image product-card__image--hover" src="https://via.placeholder.com/400x500/eaeaea/000000?text=Lifestyle+Alternate" alt="Solid walnut table lifestyle" loading="lazy" width="400" height="500">
+              </picture>
+            </a>
+            <div class="product-card__content">
+              <span style="font-family: var(--font-label); font-size: var(--text-xs); color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: var(--space-1);">Solid Walnut</span>
+              <h2 class="product-card__title">Malak Dining Table</h2>
+              <p class="product-card__desc">Hand-applied matte oil finish. Seats 8.</p>
+              <div class="product-card__price">28,000 EGP</div>
+            </div>
+            <div class="product-card__quick-add">
+              <button class="btn btn--primary btn--full">Quick View</button>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card">
+            <div class="product-card__material-strip" style="background-color: var(--material-oak);"></div>
+            <button class="product-card__wishlist" aria-label="Add Kemi Oak Chair to wishlist">♡</button>
+            <a href="product.html" class="product-card__image-wrapper">
+              <picture>
+                <img class="product-card__image" src="https://via.placeholder.com/400x500" alt="Oak chair main" loading="lazy" width="400" height="500">
+              </picture>
+              <picture>
+                <img class="product-card__image product-card__image--hover" src="https://via.placeholder.com/400x500/eaeaea/000000?text=Lifestyle+Alternate" alt="Oak chair lifestyle" loading="lazy" width="400" height="500">
+              </picture>
+            </a>
+            <div class="product-card__content">
+              <span style="font-family: var(--font-label); font-size: var(--text-xs); color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: var(--space-1);">Solid Oak + Linen</span>
+              <h2 class="product-card__title">Kemi Lounge Chair</h2>
+              <p class="product-card__desc">Mortise and tenon joinery.</p>
+              <div class="product-card__price">12,500 EGP</div>
+            </div>
+            <div class="product-card__quick-add">
+              <button class="btn btn--primary btn--full">Quick View</button>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card">
+            <div class="product-card__material-strip" style="background-color: var(--material-mahogany);"></div>
+            <button class="product-card__wishlist" aria-label="Add Zoser Cabinet to wishlist">♡</button>
+            <div class="product-card__badges">
+              <span class="badge" style="background: var(--color-surface); color: var(--color-text-primary);">New Arrival</span>
+            </div>
+            <a href="product.html" class="product-card__image-wrapper">
+              <picture>
+                <img class="product-card__image" src="https://via.placeholder.com/400x500" alt="Mahogany cabinet main" loading="lazy" width="400" height="500">
+              </picture>
+              <picture>
+                <img class="product-card__image product-card__image--hover" src="https://via.placeholder.com/400x500/eaeaea/000000?text=Lifestyle+Alternate" alt="Mahogany cabinet lifestyle" loading="lazy" width="400" height="500">
+              </picture>
+            </a>
+            <div class="product-card__content">
+              <span style="font-family: var(--font-label); font-size: var(--text-xs); color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: var(--space-1);">Mahogany</span>
+              <h2 class="product-card__title">Zoser Storage Cabinet</h2>
+              <p class="product-card__desc">Hand-carved detailing. Brass pulls.</p>
+              <div class="product-card__price">45,000 EGP</div>
+            </div>
+            <div class="product-card__quick-add">
+              <button class="btn btn--primary btn--full">Quick View</button>
+            </div>
+          </article>
+
+           <!-- Product Card 4 -->
+           <article class="product-card">
+            <div class="product-card__material-strip" style="background-color: var(--fabric-velvet);"></div>
+            <button class="product-card__wishlist" aria-label="Add Cairo Velvet Sofa to wishlist">♡</button>
+            <a href="product.html" class="product-card__image-wrapper">
+              <picture>
+                <img class="product-card__image" src="https://via.placeholder.com/400x500" alt="Velvet Sofa main" loading="lazy" width="400" height="500">
+              </picture>
+              <picture>
+                <img class="product-card__image product-card__image--hover" src="https://via.placeholder.com/400x500/eaeaea/000000?text=Lifestyle+Alternate" alt="Velvet Sofa lifestyle" loading="lazy" width="400" height="500">
+              </picture>
+            </a>
+            <div class="product-card__content">
+              <span style="font-family: var(--font-label); font-size: var(--text-xs); color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: var(--space-1);">Beech Frame + Velvet</span>
+              <h2 class="product-card__title">Cairo 3-Seater Sofa</h2>
+              <p class="product-card__desc">High-density foam. Stain-resistant.</p>
+              <div class="product-card__price">32,000 EGP</div>
+            </div>
+            <div class="product-card__quick-add">
+              <button class="btn btn--primary btn--full">Quick View</button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex flex--center" style="margin-top: var(--space-12);">
+        <button class="btn btn--secondary">Load More Products</button>
+      </div>
+
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

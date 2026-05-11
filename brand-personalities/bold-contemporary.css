@@ -1,0 +1,47 @@
+/* BOLD CONTEMPORARY PERSONALITY */
+/* For: Design-forward studios, architect-adjacent clients, commercial fit-out, trend buyers */
+
+:root {
+  /* Colors */
+  --color-background: #FFFFFF; /* clean white */
+  --color-surface: #F5F5F5; /* light neutral card */
+  --color-text-primary: #0F0F0F; /* near-black */
+  --color-text-secondary: #6B6B6B; /* neutral grey */
+  --color-accent: #1A1A1A; /* monochrome confidence */
+  --color-accent-hover: #000000;
+  --color-border: #E0E0E0; /* clean neutral */
+  --color-surface-raised: #FFFFFF;
+
+  /* Typography */
+  --font-display: "Barlow Condensed", "Space Grotesk", sans-serif; /* high impact */
+  --font-body: "IBM Plex Sans", "Inter", sans-serif; /* precise, technical */
+  --font-arabic: "Tajawal", sans-serif;
+
+  /* Radius - architectural precision */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-pill: 0;
+
+  /* Spacing - Extreme contrast */
+  /* Keeps default spacing from tokens.css but classes might use extreme values */
+
+  /* Shadows - none or sharp offset */
+  --shadow-sm: 4px 4px 0 rgba(0,0,0,0.1);
+  --shadow-md: 8px 8px 0 rgba(0,0,0,0.1);
+  --shadow-hover: 12px 12px 0 rgba(0,0,0,0.1);
+
+  /* Motion - fast and precise */
+  --dur-fast: 100ms;
+  --dur-normal: 150ms;
+  --dur-slow: 250ms;
+  --ease-pour: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-grain: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* No texture */
+body {
+  background-image: none;
+}

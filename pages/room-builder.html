@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Finder - Damietta Heritage Furniture</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../layout.css">
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="../rtl.css">
+  <style>
+    /* Quiz Specific Overrides */
+    body { background: var(--color-background); }
+    .quiz-container {
+      max-width: 800px;
+      margin: var(--space-8) auto;
+      padding: var(--space-4);
+    }
+    .quiz-progress {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+    }
+    .quiz-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-border);
+      transition: background var(--dur-normal);
+    }
+    .quiz-dot[aria-current="true"] {
+      background: var(--color-accent);
+    }
+    .quiz-dot.is-completed {
+      background: var(--color-accent-subtle);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Minimal -->
+  <header style="padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border); background: var(--color-surface);">
+    <div class="container flex flex--space-between flex--align-center">
+      <div class="logo">
+        <a href="index.html" style="font-family: var(--font-display); font-size: var(--text-xl); color: inherit;">DAMIETTA</a>
+      </div>
+      <a href="index.html" class="btn btn--ghost" style="font-size: var(--text-xs);">✕ Exit</a>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <div class="quiz-progress" aria-label="Quiz progress">
+      <div class="quiz-dot" aria-current="true"></div>
+      <div class="quiz-dot"></div>
+      <div class="quiz-dot"></div>
+      <div class="quiz-dot"></div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="quiz-step is-active" id="step-1">
+      <h1 style="font-family: var(--font-display); font-size: var(--text-3xl); margin-bottom: var(--space-2);">What room are you furnishing?</h1>
+      <p style="color: var(--color-text-secondary);">Select the space you're looking to upgrade.</p>
+
+      <div class="quiz-step__options">
+        <div class="quiz-option" tabindex="0">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2);">🛋️</div>
+          <div style="font-weight: 600; font-size: var(--text-sm);">Living Room</div>
+        </div>
+        <div class="quiz-option" tabindex="0">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2);">🛏️</div>
+          <div style="font-weight: 600; font-size: var(--text-sm);">Bedroom</div>
+        </div>
+        <div class="quiz-option" tabindex="0">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2);">🍽️</div>
+          <div style="font-weight: 600; font-size: var(--text-sm);">Dining Room</div>
+        </div>
+        <div class="quiz-option" tabindex="0">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2);">💻</div>
+          <div style="font-weight: 600; font-size: var(--text-sm);">Home Office</div>
+        </div>
+      </div>
+
+      <div style="margin-top: var(--space-8); display: flex; justify-content: flex-end;">
+        <button class="btn btn--primary" onclick="nextStep(2)">Next Step</button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="quiz-step" id="step-2">
+      <h2 style="font-family: var(--font-display); font-size: var(--text-3xl); margin-bottom: var(--space-2);">How do you want the space to feel?</h2>
+      <p style="color: var(--color-text-secondary);">Select the mood that speaks to you.</p>
+
+      <div class="quiz-step__options">
+        <div class="quiz-option" tabindex="0">
+          <div style="width: 100%; aspect-ratio: 1; background: #C4602A; border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+          <div style="font-weight: 600; font-size: var(--text-sm);">Warm & Cozy</div>
+        </div>
+        <div class="quiz-option" tabindex="0">
+          <div style="width: 100%; aspect-ratio: 1; background: #F2F0EC; border: 1px solid #ddd; border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+          <div style="font-weight: 600; font-size: var(--text-sm);">Clean & Minimal</div>
+        </div>
+        <div class="quiz-option" tabindex="0">
+          <div style="width: 100%; aspect-ratio: 1; background: #1A1A1A; border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+          <div style="font-weight: 600; font-size: var(--text-sm);">Bold & Dramatic</div>
+        </div>
+        <div class="quiz-option" tabindex="0">
+          <div style="width: 100%; aspect-ratio: 1; background: #C8A97E; border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+          <div style="font-weight: 600; font-size: var(--text-sm);">Natural & Organic</div>
+        </div>
+      </div>
+
+      <div style="margin-top: var(--space-8); display: flex; justify-content: space-between;">
+        <button class="btn btn--ghost" onclick="nextStep(1)">Back</button>
+        <button class="btn btn--primary" onclick="nextStep(3)">Next Step</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="quiz-step" id="step-3">
+      <h2 style="font-family: var(--font-display); font-size: var(--text-3xl); margin-bottom: var(--space-2);">What matters most to you?</h2>
+      <p style="color: var(--color-text-secondary);">Select up to two priorities.</p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; margin-top: var(--space-6);">
+        <button class="variant-pill">Durability</button>
+        <button class="variant-pill">Solid Wood</button>
+        <button class="variant-pill">Custom Size</button>
+        <button class="variant-pill">Fast Delivery</button>
+        <button class="variant-pill">Investment Piece</button>
+      </div>
+
+      <div style="margin-top: var(--space-8); display: flex; justify-content: space-between;">
+        <button class="btn btn--ghost" onclick="nextStep(2)">Back</button>
+        <button class="btn btn--primary" onclick="showResults()">See Results</button>
+      </div>
+    </div>
+
+    <!-- Results (Shown at end) -->
+    <div class="quiz-step" id="step-results" style="background: transparent; padding: 0;">
+      <h2 style="font-family: var(--font-display); font-size: var(--text-4xl); margin-bottom: var(--space-4);">Your Curated Matches</h2>
+      <p style="color: var(--color-text-secondary); margin-bottom: var(--space-8);">Based on your preferences, here is what we recommend for your space.</p>
+
+      <div class="grid grid--3-col text-left">
+        <!-- Reusing product card component -->
+        <article class="product-card">
+          <a href="product.html" class="product-card__image-wrapper">
+            <img class="product-card__image" src="https://via.placeholder.com/400x500" alt="Recommended Item" loading="lazy">
+          </a>
+          <div class="product-card__content">
+            <h3 class="product-card__title">The Malak Table</h3>
+            <p class="product-card__desc">Solid Walnut. Perfect for warm, organic dining spaces.</p>
+            <div class="product-card__price">28,000 EGP</div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a href="product.html" class="product-card__image-wrapper">
+            <img class="product-card__image" src="https://via.placeholder.com/400x500" alt="Recommended Item" loading="lazy">
+          </a>
+          <div class="product-card__content">
+            <h3 class="product-card__title">The Zoser Chair</h3>
+            <p class="product-card__desc">Solid wood frame. Highly durable for everyday use.</p>
+            <div class="product-card__price">8,500 EGP</div>
+          </div>
+        </article>
+
+        <!-- Recommended Collection -->
+        <article class="product-card" style="background: var(--color-accent); color: white;">
+          <div class="product-card__content flex flex--column flex--center" style="height: 100%; text-align: center;">
+            <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); margin-bottom: var(--space-4);">The Full Room Look</h3>
+            <p style="margin-bottom: var(--space-6); opacity: 0.9;">See how these pieces work together in our curated room sets.</p>
+            <a href="collections.html" class="btn" style="background: white; color: var(--color-accent);">View Collection</a>
+          </div>
+        </article>
+      </div>
+
+      <div style="margin-top: var(--space-8);">
+        <a href="gallery.html" class="btn btn--secondary">See all furniture</a>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Simple mock logic for UI demonstration
+    function nextStep(step) {
+      document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('is-active'));
+      document.getElementById('step-' + step).classList.add('is-active');
+
+      document.querySelectorAll('.quiz-dot').forEach((dot, index) => {
+        dot.setAttribute('aria-current', index === (step - 1) ? 'true' : 'false');
+        if (index < (step - 1)) dot.classList.add('is-completed');
+        else dot.classList.remove('is-completed');
+      });
+    }
+
+    function showResults() {
+      document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('is-active'));
+      document.getElementById('step-results').classList.add('is-active');
+      document.querySelector('.quiz-progress').style.display = 'none';
+    }
+
+    // Toggle options visually
+    document.querySelectorAll('.quiz-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        opt.parentNode.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('is-selected'));
+        opt.classList.add('is-selected');
+      });
+    });
+
+    document.querySelectorAll('.variant-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        pill.classList.toggle('is-selected');
+        pill.style.borderColor = pill.classList.contains('is-selected') ? 'var(--color-accent)' : '';
+        pill.style.background = pill.classList.contains('is-selected') ? 'var(--color-surface)' : '';
+      });
+    });
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

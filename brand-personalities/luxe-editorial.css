@@ -1,0 +1,61 @@
+/* LUXE EDITORIAL PERSONALITY */
+/* For: High-end showrooms, premium custom furniture, Gulf and European export clients */
+
+:root {
+  /* Colors */
+  --color-background: #0C0A08; /* warm obsidian */
+  --color-surface: #161210; /* dark warm card */
+  --color-text-primary: #F5F0E8; /* warm ivory */
+  --color-text-secondary: #A89880; /* muted warm gold-grey */
+  --color-accent: #C9903A; /* deep gold */
+  --color-accent-hover: #E0A84A;
+  --color-border: #2A2420; /* dark warm divider */
+  --color-surface-raised: #1A1614;
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", "Bodoni Moda", serif; /* ultra-high contrast */
+  --font-body: "Jost", "Lato", sans-serif; /* Light, thin */
+  --font-arabic: "Scheherazade New", serif;
+
+  /* Radius - architectural precision */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-pill: 0;
+
+  /* Spacing - 1.5x default */
+  --space-1: 6px;
+  --space-2: 12px;
+  --space-3: 18px;
+  --space-4: 24px;
+  --space-5: 30px;
+  --space-6: 36px;
+  --space-8: 48px;
+  --space-10: 60px;
+  --space-12: 72px;
+  --space-16: 96px;
+  --space-20: 120px;
+  --space-24: 144px;
+  --space-32: 192px;
+
+  /* Shadows - deep and directional */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 24px 64px rgba(0, 0, 0, 0.8);
+  --shadow-wood-glow: 0;
+
+  /* Motion - ultra-slow reveals, no bouncy easing */
+  --dur-fast: 200ms;
+  --dur-normal: 400ms;
+  --dur-slow: 700ms;
+  --dur-reveal: 1000ms;
+  --ease-pour: cubic-bezier(0.2, 0, 0, 1);
+  --ease-grain: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Texture overlay for dark backgrounds */
+body {
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.04"/></svg>');
+}

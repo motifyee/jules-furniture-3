@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal - Damietta Heritage Furniture</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../layout.css">
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="../rtl.css">
+  <style>
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .article-card__img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-4);
+      transition: transform var(--dur-normal) var(--ease-out);
+    }
+    .article-card:hover .article-card__img {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <header style="padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border); background: var(--color-surface);">
+    <div class="container flex flex--space-between flex--align-center">
+      <div class="logo">
+        <a href="index.html" style="font-family: var(--font-display); font-size: var(--text-xl); color: inherit;">DAMIETTA</a>
+      </div>
+      <nav class="flex flex--gap-md" style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-xs);">
+        <a href="gallery.html">Shop</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-12);">
+        <h1 style="font-family: var(--font-display); font-size: var(--text-4xl); margin-bottom: var(--space-4);">The Journal</h1>
+        <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto;">Thoughts on interior design, care guides for solid wood, and stories from the workshop.</p>
+      </div>
+
+      <!-- Featured Article -->
+      <article style="margin-bottom: var(--space-16);">
+        <a href="#" class="article-card">
+          <img class="article-card__img" src="https://via.placeholder.com/1200x600" alt="Living room styling">
+          <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <span style="font-family: var(--font-label); font-size: var(--text-xs); text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.05em;">Design Guide</span>
+            <h2 style="font-family: var(--font-display); font-size: var(--text-3xl); margin-block: var(--space-2) var(--space-4);">How to style a minimalist, warm living room</h2>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--space-4);">Minimalism doesn't have to mean cold. Discover how to use natural textures, solid oak, and warm lighting to create a space that feels uncluttered but inviting.</p>
+            <span class="btn btn--ghost">Read Article →</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Article Grid -->
+      <div class="grid grid--3-col" style="row-gap: var(--space-12);">
+        <article>
+          <a href="#" class="article-card">
+            <img class="article-card__img" src="https://via.placeholder.com/600x400" alt="Wood care">
+            <span style="font-family: var(--font-label); font-size: var(--text-xs); text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.05em; margin-bottom: var(--space-2);">Care Guide</span>
+            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Protecting your solid walnut table</h3>
+            <p style="color: var(--color-text-secondary); font-size: var(--text-sm);">A step-by-step guide to applying natural oil and maintaining the luster of your dining table for decades.</p>
+          </a>
+        </article>
+
+        <article>
+          <a href="#" class="article-card">
+            <img class="article-card__img" src="https://via.placeholder.com/600x400" alt="Workshop">
+            <span style="font-family: var(--font-label); font-size: var(--text-xs); text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.05em; margin-bottom: var(--space-2);">Workshop Stories</span>
+            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Why we still hand-cut our dovetail joints</h3>
+            <p style="color: var(--color-text-secondary); font-size: var(--text-sm);">Machines are faster, but the tactile feedback of a hand-cut joint ensures a fit that lasts generations.</p>
+          </a>
+        </article>
+
+        <article>
+          <a href="#" class="article-card">
+            <img class="article-card__img" src="https://via.placeholder.com/600x400" alt="Upholstery">
+            <span style="font-family: var(--font-label); font-size: var(--text-xs); text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.05em; margin-bottom: var(--space-2);">Material Focus</span>
+            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Choosing between Linen and Velvet</h3>
+            <p style="color: var(--color-text-secondary); font-size: var(--text-sm);">Understanding durability, maintenance, and the spatial impact of our two most popular upholstery fabrics.</p>
+          </a>
+        </article>
+      </div>
+
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

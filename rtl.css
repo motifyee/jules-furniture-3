@@ -1,0 +1,93 @@
+/* RTL / ARABIC OVERRIDES */
+
+/* Base overrides for RTL mode */
+html[dir="rtl"] {
+  /* Increase base font size slightly for Arabic readability */
+  font-size: 105%;
+}
+
+html[dir="rtl"] body {
+  /* Increase line height for descenders in Arabic fonts */
+  line-height: var(--lh-prose);
+  text-align: start;
+}
+
+/* Explicit text alignment for elements that might hardcode it */
+html[dir="rtl"] .text-left {
+  text-align: right;
+}
+html[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* Navigation shifts */
+html[dir="rtl"] .nav__list {
+  flex-direction: row-reverse;
+}
+
+/* Icons mirroring */
+html[dir="rtl"] .icon--directional {
+  transform: scaleX(-1);
+}
+
+/* Breadcrumbs */
+html[dir="rtl"] .breadcrumb__separator {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Product Gallery */
+html[dir="rtl"] .product-gallery__thumbnails {
+  /* Assumes thumbnails might be on the left in LTR and need to move to right in RTL */
+  order: 2;
+}
+html[dir="rtl"] .product-gallery__main {
+  order: 1;
+}
+
+/* Forms */
+html[dir="rtl"] .input-field {
+  text-align: right;
+}
+
+html[dir="rtl"] .input-group {
+  align-items: flex-start;
+}
+
+/* Quiz Step Options */
+html[dir="rtl"] .quiz-step {
+  text-align: right;
+}
+
+/* Testimonial Card */
+html[dir="rtl"] .testimonial-card__author {
+  flex-direction: row-reverse;
+}
+
+/* Review Card */
+html[dir="rtl"] .review-card__header {
+  flex-direction: row-reverse;
+}
+
+/* Buttons */
+html[dir="rtl"] .btn {
+  flex-direction: row-reverse;
+}
+
+/* Accordion Marker */
+html[dir="rtl"] details.accordion summary {
+  flex-direction: row-reverse;
+}
+
+/* Any specific logical property fallback if needed.
+   Ideally, logical properties (margin-inline-start, padding-inline-end, etc)
+   are used in main CSS so explicit overrides aren't heavily needed here.
+*/
+html[dir="rtl"] .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+html[dir="rtl"] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}

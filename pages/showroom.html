@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showroom - Damietta Heritage Furniture</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../layout.css">
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="../rtl.css">
+</head>
+<body>
+  <header style="padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border); background: var(--color-surface);">
+    <div class="container flex flex--space-between flex--align-center">
+      <div class="logo">
+        <a href="index.html" style="font-family: var(--font-display); font-size: var(--text-xl); color: inherit;">DAMIETTA</a>
+      </div>
+      <nav class="flex flex--gap-md" style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-xs);">
+        <a href="gallery.html">Shop</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="height: 60vh; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+      <img src="https://via.placeholder.com/1600x600" alt="Showroom interior" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+      <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: 2;"></div>
+      <div style="position: relative; z-index: 3; color: white; text-align: center; padding: var(--space-4);">
+        <h1 style="font-size: var(--text-display); margin-bottom: var(--space-4);">Visit the Showroom</h1>
+        <p style="font-size: var(--text-xl); max-width: 600px; margin: 0 auto;">Experience the warmth, weight, and craft in person.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid--split" style="gap: var(--space-12);">
+
+          <!-- Showroom Details -->
+          <div>
+            <h2 style="font-family: var(--font-display); font-size: var(--text-3xl); margin-bottom: var(--space-6);">Cairo Flagship</h2>
+
+            <div style="margin-bottom: var(--space-8);">
+              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2); font-weight: 600;">Address</h3>
+              <p style="color: var(--color-text-secondary);">
+                12 Design District Road<br>
+                New Cairo, Cairo Governorate<br>
+                Egypt
+              </p>
+              <a href="#" style="font-size: var(--text-sm); text-decoration: underline; margin-top: var(--space-2); display: inline-block;">Get Directions on Google Maps</a>
+            </div>
+
+            <div style="margin-bottom: var(--space-8);">
+              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2); font-weight: 600;">Hours</h3>
+              <table style="width: 100%; max-width: 300px; color: var(--color-text-secondary); font-size: var(--text-sm);">
+                <tr><td style="padding: 4px 0;">Sunday - Thursday</td><td style="text-align: right;">10:00 AM - 10:00 PM</td></tr>
+                <tr><td style="padding: 4px 0;">Friday</td><td style="text-align: right;">2:00 PM - 11:00 PM</td></tr>
+                <tr><td style="padding: 4px 0;">Saturday</td><td style="text-align: right;">10:00 AM - 10:00 PM</td></tr>
+              </table>
+            </div>
+
+            <div style="margin-bottom: var(--space-8);">
+              <h3 style="font-size: var(--text-base); margin-bottom: var(--space-2); font-weight: 600;">Contact</h3>
+              <p style="color: var(--color-text-secondary);">
+                Phone: +20 123 456 7890<br>
+                Email: showroom@damiettaheritage.com
+              </p>
+            </div>
+
+            <a href="https://wa.me/1234567890" class="btn btn--primary">Book an Appointment</a>
+          </div>
+
+          <!-- Virtual Tour / Image Grid -->
+          <div>
+            <div style="background: var(--color-surface); padding: var(--space-6); border-radius: var(--radius-md); text-align: center; margin-bottom: var(--space-6);">
+              <div style="font-size: 3rem; margin-bottom: var(--space-4);">🕶️</div>
+              <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-2);">Can't make it in person?</h3>
+              <p style="color: var(--color-text-secondary); margin-bottom: var(--space-4); font-size: var(--text-sm);">Take a 360° virtual tour of our showroom from anywhere.</p>
+              <button class="btn btn--secondary">Start Virtual Tour</button>
+            </div>
+
+            <div class="grid grid--2-col">
+              <img src="https://via.placeholder.com/400x300" alt="Showroom interior" style="width: 100%; border-radius: var(--radius-sm);">
+              <img src="https://via.placeholder.com/400x300" alt="Material samples" style="width: 100%; border-radius: var(--radius-sm);">
+              <img src="https://via.placeholder.com/400x300" alt="Design consultation area" style="width: 100%; border-radius: var(--radius-sm);">
+              <img src="https://via.placeholder.com/400x300" alt="Workshop display" style="width: 100%; border-radius: var(--radius-sm);">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
