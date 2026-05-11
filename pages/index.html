@@ -39,7 +39,7 @@
       position: relative;
       z-index: 3;
       color: #fff;
-      padding-top: 20vh;
+      /* padding-top removed because header is sticky */
     }
     .hero__title {
       font-size: var(--text-display);
@@ -64,35 +64,12 @@
       margin: 0 auto;
       letter-spacing: 0.02em;
     }
-    /* Nav */
-    .site-header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      padding: var(--space-4) 0;
-      color: #fff;
-    }
-    .site-header__inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .site-nav {
-      display: none;
-      gap: var(--space-6);
-    }
+    /* Nav removed */
+
     @media(min-width: 1024px) {
-      .site-nav { display: flex; }
+
     }
-    .site-nav a {
-      color: inherit;
-      font-family: var(--font-label);
-      text-transform: uppercase;
-      font-size: var(--text-sm);
-      letter-spacing: 0.05em;
-    }
+
     .mobile-tab-bar {
       position: fixed;
       bottom: 0;
@@ -117,23 +94,24 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
+    <header class="site-header--sticky glass-effect" style="padding: var(--space-4) 0;">
+    <div class="container flex flex--space-between flex--align-center">
       <div class="logo">
-        <a href="index.html" style="font-family: var(--font-display); font-size: var(--text-2xl); color: inherit;">DAMIETTA</a>
+        <a href="index.html" style="font-family: var(--font-display); font-size: var(--text-2xl); color: inherit; text-decoration: none;">DAMIETTA</a>
       </div>
-      <nav class="site-nav">
-        <a href="gallery.html">Shop</a>
-        <a href="collections.html">Collections</a>
-        <a href="custom-order.html">Custom Orders</a>
-        <a href="about.html">About</a>
-        <a href="showroom.html">Showroom</a>
+      <nav class="flex flex--gap-lg" style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-xs); align-items: center;">
+        <a href="gallery.html" style="text-decoration: none; color: inherit; font-weight: 600;">Shop</a>
+        <a href="collections.html" style="text-decoration: none; color: inherit; font-weight: 600;">Collections</a>
+        <a href="custom-order.html" style="text-decoration: none; color: inherit; font-weight: 600;">Custom</a>
+        <a href="about.html" style="text-decoration: none; color: inherit; font-weight: 600;">About</a>
+        <a href="showroom.html" style="text-decoration: none; color: inherit; font-weight: 600;">Showroom</a>
+        <a href="journal.html" style="text-decoration: none; color: inherit; font-weight: 600;">Journal</a>
       </nav>
       <div class="header-actions flex flex--gap-md flex--align-center">
-        <button class="btn btn--ghost" aria-label="Search">🔍</button>
-        <button class="btn btn--ghost" aria-label="Wishlist">♡</button>
-        <button class="btn btn--ghost" aria-label="Cart">🛒</button>
-        <button class="btn btn--ghost" onclick="document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl';">عربي</button>
+        <button class="btn btn--ghost" aria-label="Search" style="padding: 0; font-size: var(--text-lg);">🔍</button>
+        <button class="btn btn--ghost" aria-label="Wishlist" style="padding: 0; font-size: var(--text-lg);">♡</button>
+        <button class="btn btn--ghost" aria-label="Cart" style="padding: 0; font-size: var(--text-lg);">🛒</button>
+        <button class="btn btn--ghost" style="padding: 0 var(--space-2); font-family: var(--font-label); font-weight: bold;" onclick="document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl';">عربي</button>
       </div>
     </div>
   </header>

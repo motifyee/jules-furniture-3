@@ -234,3 +234,23 @@
   scroll-snap-align: start;
   flex: 0 0 auto;
 }
+
+/* STICKY GLASS HEADER */
+.site-header--sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* Since CSS variables for colors are hex, we'll use a specific token or fallback for the glass effect. */
+  /* This creates a semi-transparent version of the surface color. */
+  background-color: var(--color-surface);
+  /* Adjusting opacity carefully via an overlay approach if hex cannot take alpha easily,
+     or relying on modern browsers handling 8 digit hex. Here we ensure the header background is semi-transparent. */
+}
+
+/* Let's define a specific utility for glass if hex is problematic */
+.glass-effect {
+  background-color: color-mix(in srgb, var(--color-surface) 85%, transparent);
+  border-bottom: 1px solid var(--color-border);
+}
